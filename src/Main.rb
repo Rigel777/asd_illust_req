@@ -1,7 +1,7 @@
 require 'yaml'
 require 'discordrb'
 
-botinfo = YAML.load_file("Token.yml")
+botinfo = YAML.load_file("../data/Token.yml")
 
 $bot = Discordrb::Commands::CommandBot.new token: botinfo["Token"], client_id: botinfo["Client_ID"], prefix: botinfo["Prefix"]
 
