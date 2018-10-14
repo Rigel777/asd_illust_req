@@ -1,0 +1,16 @@
+:icons: font
+:toc: left
+
+# あさださんのイラストリクエストお答えbotです
+
+## ディレクトリ
+
+. data 起動に必要なデータが格納されているフォルダ
+. src ソースファイル
+. Gemfile
+. Gemfile.lock
+. readme.adoc 本ページ
+
+## 注意事項
+
+WARNING: masterブランチへの直接pushは禁止しています。することもできません。
