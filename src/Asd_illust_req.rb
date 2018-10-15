@@ -4,8 +4,6 @@ require 'discordrb'
 class Asd_illust_req
   
   attr_accessor :bot
-  @botinfo = nil
-  @list = nil
   # 初期化処理
   def initialize
     @botinfo = YAML.load_file("../data/Token.yml")
@@ -20,18 +18,13 @@ class Asd_illust_req
     @bot.run(true)
   end
 
-  #botinfo ゲッタセッタ
-  def botinfo
-    @botinfo
+  #bot ゲッタセッタ
+  def getbot()
+    return @bot
   end
 
-  #list ゲッタセッタ
-  def list
-    @list
-  end
-  #bot ゲッタセッタ
-  def bot
-    @bot
+  def setbot(bot)
+    @bot = bot
   end
 
 # 設定

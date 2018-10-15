@@ -9,11 +9,12 @@ class MainTest < Minitest::Test
     def test_sample
         @tmp = 'a'
         asd = Asd_illust_req.new
-        asd.bot.run(true)
-        asd.bot.command(:help){|event|
+        asd.start()
+        asd.getbot().command(:help) do |event|
+            p helloworld
             a = event.respond "req!help"
-            @tmp = a.content
-        }
+            @tmp = a.content.dup
+        end
         assert_equal nil , @tmp
     end
 
