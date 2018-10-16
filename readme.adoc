@@ -16,6 +16,8 @@ endif::[]
 
 . data 起動に必要なデータが格納されているフォルダ
 . src ソースファイル
+. test テストコード
+. gitignore 
 . Gemfile
 . Gemfile.lock
 . readme.adoc 本ページ
