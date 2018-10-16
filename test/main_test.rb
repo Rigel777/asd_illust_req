@@ -7,15 +7,12 @@ require 'discordrb'
 
 class MainTest < Minitest::Test
     def test_sample
-        @tmp = 'a'
+        tmp = 'a'
         asd = Asd_illust_req.new
         asd.start()
-        asd.getbot().command(:help) do |event|
-            p helloworld
-            a = event.respond "req!help"
-            @tmp = a.content.dup
-        end
-        assert_equal nil , @tmp
+
+        tmp = asd.getbot().simple_execute("" , "req!help")
+        assert_equal nil , tmp
     end
 
     def test_sample2
