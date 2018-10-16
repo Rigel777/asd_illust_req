@@ -16,6 +16,8 @@ endif::[]
 
 . data 起動に必要なデータが格納されているフォルダ
 . src ソースファイル
+. test テストコード
+. gitignore 
 . Gemfile
 . Gemfile.lock
 . readme.adoc 本ページ
@@ -23,3 +25,19 @@ endif::[]
 ## 注意事項
 
 WARNING: masterブランチへの直接pushは禁止しています。することもできません。
+
+## テスト環境について
+
+Ruby2.5以上のwindows環境では以下のパッケージをインストールする必要があります。
+
+`gem install rest-client --pre`
+
+WARNING: Ruby2.5以上のwindows環境下限定です
+
+### テストのconfigについて
+
+`::RBNACL_LIBSODIUM_GEM_LIB_PATH = "libsodium.dll"`
+
+`::RBNACL_LIBSODIUM_GEM_LIB_PATH` は任意のパスの指定になります。
+
+TIP: 本PJではtestフォルダ内に含めることにして環境差異を減らすことにしました。
